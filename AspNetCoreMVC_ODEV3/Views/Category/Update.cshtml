@@ -1,0 +1,23 @@
+﻿@model AspNetCoreMVC_ODEV3.Models.Category
+
+@{
+    ViewData["Title"] = "Update";
+}
+
+<h1>Update Category</h1>
+<form method="post">
+    <div class="form-group">
+        <label for="categoryID">Category ID</label>
+        <input type="text" class="form-control" id="categoryID" name="CategoryId" value="@Model.CategoryId" readonly>
+    </div>
+    <div class="form-group">
+        <label for="categoryName">Category Name</label>
+        <input type="text" class="form-control" id="categoryName" name="CategoryName" value="@Model.CategoryName">
+    </div>
+    <div class="form-group">
+        <label for="description">Description</label>
+        <input type="text" class="form-control" id="description" name="Description" value="@Model.Description">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+

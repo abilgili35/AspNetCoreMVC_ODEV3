@@ -1,0 +1,37 @@
+﻿@model List<AspNetCoreMVC_ODEV3.Models.Category>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Categories</h1>
+<br />
+    <a href="~/Category/Create" class="btn btn-danger me-2">Create</a>
+<br />
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @if(Model.Count > 0)
+        {
+            @foreach(AspNetCoreMVC_ODEV3.Models.Category c in Model)
+            {
+                <tr>
+                    <td>@c.CategoryId</td>
+                    <td>@c.CategoryName</td>
+                    <td>@c.Description</td>
+                    <td>
+                        <a href="~/Category/Update/@c.CategoryId" class="btn btn-primary me-2">Update</a>
+                        <a href="~/Category/Delete/@c.CategoryId" class="btn btn-danger">Delete</a>
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+
